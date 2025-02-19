@@ -1,0 +1,33 @@
+{
+  "name": "lint-staged",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "next": "15.1.7",
+    "prettier": "^3.5.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "eslint-config-next": "15.1.7",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.15.0",
+    "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,html.css}": "prettier --write",
+    "src/**/*.js": "eslint"
+  }
+}
